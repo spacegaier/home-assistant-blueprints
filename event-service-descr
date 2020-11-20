@@ -1,5 +1,5 @@
 blueprint:
-  name: Call service from event
+  name: Call service from event (with input descriptions)
   domain: automation 
   input:
     trigger_event: 
