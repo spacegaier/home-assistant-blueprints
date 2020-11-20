@@ -4,8 +4,10 @@ blueprint:
   input:
     trigger_event: 
       name: Trigger event
+      description: Event that will trigger the execution of this automation
     service_to_call: 
       name: Service to call
+      description: Service that will be called by this automation
 trigger:
   platform: event
   event_type: !placeholder trigger_event
