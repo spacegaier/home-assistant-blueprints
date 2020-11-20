@@ -13,8 +13,7 @@ blueprint:
         entity:
           domain: light
 trigger:
-  - platform: devices
-    domain: zha
+  - platform: device
     device_id: !placeholder remote_device_id
     type: turn_on
 action:
