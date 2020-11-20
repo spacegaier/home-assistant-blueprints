@@ -1,0 +1,22 @@
+blueprint:
+  name: Switch on light
+  domain: automation
+  input:
+    remote_device_id:
+      name: Remote device
+      selector:
+        device:
+          integration: tplink
+    light_entity_id:
+      name: Light entity
+      selector:
+        entity:
+          domain: light
+trigger:
+  - platform: devices
+    domain: zha
+    device_id: !placeholder remote_device_id
+    type: turn_on
+action:
+  - service: light.toggle
+    entity_id: !placeholder light_entity_id
