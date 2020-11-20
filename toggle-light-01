@@ -7,16 +7,22 @@ blueprint:
       selector:
         device:
           integration: tplink
+    switch_entity_id:
+      name: Switch entity
+      selector:
+        entity:
+          domain: switch
     light_entity_id:
       name: Light entity
       selector:
         entity:
           domain: light
 trigger:
-  - platform: device
-    device_id: !placeholder 'remote_device_id'
-    type: turned_on
-    domain: switch
+- platform: device
+  device_id: !placeholder 'remote_device_id'
+  entity_id: !placeholder 'switch_entity_id'
+  type: turned_on
+  domain: switch
 action:
-  - service: light.toggle
-    entity_id: !placeholder light_entity_id
+- service: light.toggle
+  entity_id: !placeholder 'light_entity_id'
