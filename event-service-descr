@@ -3,10 +3,10 @@ blueprint:
   domain: automation 
   input:
     trigger_event: 
-      name: Trigger event
+      name: Trigger event name
       description: Event that will trigger the execution of this automation
     service_to_call: 
-      name: Service to call
+      name: Service name
       description: Service that will be called by this automation
 trigger:
   platform: event
