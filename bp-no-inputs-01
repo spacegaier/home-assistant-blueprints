@@ -1,0 +1,5 @@
+blueprint:
+  name: No Inputs Test
+  domain: automation 
+trigger:
+  platform: event
