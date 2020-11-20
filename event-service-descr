@@ -2,8 +2,10 @@ blueprint:
   name: Call service from event
   domain: automation 
   input:
-    trigger_event: Trigger event
-    service_to_call: Service to call
+    trigger_event: 
+      name: Trigger event
+    service_to_call: 
+      name: Service to call
 trigger:
   platform: event
   event_type: !placeholder trigger_event
