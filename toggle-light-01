@@ -1,5 +1,6 @@
 blueprint:
   name: Switch on light
+  description: Switch on a light when a certain switch is toggled
   domain: automation
   input:
     remote_device_id:
