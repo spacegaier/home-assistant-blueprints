@@ -19,10 +19,10 @@ blueprint:
           domain: light
 trigger:
 - platform: device
-  device_id: !placeholder 'remote_device_id'
-  entity_id: !placeholder 'switch_entity_id'
+  device_id: !input 'remote_device_id'
+  entity_id: !input 'switch_entity_id'
   type: turned_on
   domain: switch
 action:
 - service: light.toggle
-  entity_id: !placeholder 'light_entity_id'
+  entity_id: !input 'light_entity_id'
